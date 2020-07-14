@@ -1,34 +1,7 @@
-<div class="content-container">
-  <div class="clr-row">
-    <div class="clr-col">
-      <span>clr-col</span>
-    </div>
-    <div class="clr-col">
-      <span>clr-col</span>
-    </div>
-    <div class="clr-col">
-      <span>clr-col</span>
-    </div>
-    <div class="clr-break-row"></div>
-    <div class="clr-col">
-      <span>clr-col</span>
-    </div>
-    <div class="clr-col">
-      <span>clr-col</span>
-    </div>
-    <div class="clr-col">
-      <span>clr-col</span>
-    </div>
-    <div class="clr-break-row"></div>
-
-    <div class="clr-col">
-      <span>clr-col</span>
-    </div>
-    <div class="clr-col">
-      <span>clr-col</span>
-    </div>
-    <div class="clr-col">
-      <span>clr-col</span>
-    </div>
+<div class="clr-row" id="board">
+  <div class="clr-col-4 square" *ngFor="let square of squares; let i = index">
+    <app-square [value]="square" (click)="selectSquare(i)">
+      {{ square }}
+    </app-square>
   </div>
 </div>

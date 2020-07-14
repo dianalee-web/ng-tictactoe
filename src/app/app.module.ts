@@ -6,19 +6,17 @@ import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BoardComponent } from './board/board.component';
+import { SquareComponent } from './square/square.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BoardComponent
-  ],
+  declarations: [AppComponent, BoardComponent, SquareComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
