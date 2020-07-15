@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css'],
 })
 export class BoardComponent implements OnInit {
-  squares: any[];
+  squares: string[];
   xIsNext: boolean;
   winner: string;
-  player;
+
   constructor() {}
 
   ngOnInit() {
@@ -21,14 +21,16 @@ export class BoardComponent implements OnInit {
     this.xIsNext = true;
   }
 
-  get Player() {
+  get player() {
     return this.xIsNext ? 'X' : 'O';
   }
+
   makeMove(index: number) {
     if (!this.squares[index]) {
       this.squares.splice(index, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
+    this.winner = this.calculateWinner();
   }
   calculateWinner() {
     const lines = [

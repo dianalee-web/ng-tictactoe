@@ -1,3 +1,6 @@
 <div class="square">
-  {{ value }}
+  <button *ngIf="!value" class="btn">{{ value }}</button>
+  <button *ngIf="value == 'X'" class="btn buttonX">{{ value }}</button>
+  <button *ngIf="value == 'O'" class="btn buttonO">{{ value }}</button>
+  <!-- <button class="btn">{{ value }}</button> -->
 </div>

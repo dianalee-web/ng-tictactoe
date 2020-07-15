@@ -1,5 +1,27 @@
-.square {
-  height: 100%;
-  width: 100%;
+button {
+  height: 125px;
+  width: 125px;
+  font-size: 2.3rem;
 
+  background: #fff;
+}
+
+
+
+.btn {
+  border: none;
+}
+
+.btn:hover {}
+
+.buttonX {
+
+  color: #fff;
+  background-color: lightskyblue
+}
+
+.buttonO {
+  /* background: orchid; */
+  background-color: orchid;
+  color: #fff;
 }

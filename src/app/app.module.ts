@@ -7,9 +7,10 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BoardComponent } from './board/board.component';
 import { SquareComponent } from './square/square.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, BoardComponent, SquareComponent],
+  declarations: [AppComponent, BoardComponent, SquareComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

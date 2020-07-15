@@ -2,11 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
-  template: `
-    <div class="square">
-      {{ value }}
-    </div>
-  `,
+  templateUrl: './square.component.html',
   styleUrls: ['./square.component.css'],
 })
 export class SquareComponent implements OnInit {

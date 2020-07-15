@@ -1,5 +1,27 @@
-<div class="clr-row" id="board">
-  <div class="clr-col-4 square" *ngFor="let square of squares; let i = index">
-    <app-square [value]="'X'"> </app-square>
+<div class="content-wrapper">
+  <div class="text-content">
+    <h3>Current Player: {{ player }}</h3>
+
+    <span>
+      <h3 *ngIf="winner" class="winner">Player '{{ winner }}' wins!</h3>
+    </span>
+  </div>
+  <br />
+
+  <div class="board clr-row">
+    <app-square
+      class="clr-col"
+      *ngFor="let square of squares; let i = index"
+      [value]="square"
+      (click)="makeMove(i)"
+    ></app-square>
+    <!-- <div class="button-wrapper"> -->
+
+    <!-- </div> -->
+  </div>
+  <div class="clr-row button-wrapper">
+    <button class="btn" (click)="newGame()">
+      New Game
+    </button>
   </div>
 </div>
