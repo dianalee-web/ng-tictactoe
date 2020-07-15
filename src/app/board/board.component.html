@@ -1,7 +1,5 @@
 <div class="clr-row" id="board">
   <div class="clr-col-4 square" *ngFor="let square of squares; let i = index">
-    <app-square [value]="square" (click)="selectSquare(i)">
-      {{ square }}
-    </app-square>
+    <app-square [value]="'X'"> </app-square>
   </div>
 </div>
